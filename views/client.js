@@ -1,16 +1,18 @@
-// $(document).ready(function(){
-//   function getTaskData(){
-//       return new Promise(function(resolve, reject){
-//           $.ajax({
-//               method: "GET",
-//               url: "https://localhost/1337/get",
-//               success: resolve,
-//               error: reject
-//           });
-//       });
-//   } getTaskData());
-//   console.log('sanity check!')
-// })
+$(document).ready(function(){
+  function getTaskData(){
+    $.get( "/get", function( data ) {
+      return new Promise(function(resolve, reject){
+        console.log(data);
+      })
+    });
+  } getTaskData().then(function(data){
+    formatTaskData();
+  });
+})
+
+function formatTaskData(data){
+  console.log(data)
+}
 
 //
 // function getNewTaskData(form){
