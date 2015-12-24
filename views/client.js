@@ -10,3 +10,12 @@ $(document).ready(function(){
       });
   } getTaskData();
 })
+
+
+function getNewTaskData(form){
+    var formValues = form.serializeArray();
+    return formValues.reduce(function(formattedTask, task){
+        formattedTask[task.name] = task.value;
+        return formattedStudent;
+    }, {});
+}

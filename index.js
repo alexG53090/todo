@@ -27,7 +27,7 @@ app.post("/set", function(req, res){
         points: req.body.points,
     }, "id").then(function(id){
         req.body.id = id[0];
-        res.status(201).send(req.body);
+        res.status(201).redirect('/index.html');
     });
 });
 // Update crud routes
