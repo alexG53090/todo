@@ -5,34 +5,43 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var cors = require('cors');
 var port = 1337;
-var knex = require("knex")({ client: "pg", connection: 'postgres://localhost/todo'});
+var knex = require("knex")({
+  client: "pg",
+  connection: 'postgres://localhost/todo',
+  });
 var Tasks = function () {return knex('tasks');}
 require('dotenv').load();
 
-// usemodules
+// use modules
 app.use(express.static('./views'));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 
 // Read crud routes
-app.get('/', function(request, response, next){
-  response.send('what up dawg')
-})
+app.get('/get', function(request, response){
+  knex('tasks').select().then(function(tasks){
+    response.status(200).json({tasks: tasks});
+  });
+});
 // Create crud routes
 app.post("/set", function(req, res){
     knex("tasks").insert({
         task: req.body.task,
         complete: req.body.complete,
         points: req.body.points,
-    }, "id").then(function(id){
-        req.body.id = id[0];
-        res.status(201).redirect('/index.html');
+    }, "task").then(function(task){
     });
 });
 // Update crud routes
 
 // Delete crud route
+
+//bad request
+app.get('/bad.html', function(req, res){
+  res.redirect('/bad.html')
+})
+
 app.listen(port, function(){
   console.log('you are now locked into port: ' + port);
 })
