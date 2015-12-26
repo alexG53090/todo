@@ -24,6 +24,12 @@ input {
   margin: 2%;
   width: 800px;
 }
+li {
+  display: block;
+}
+ul {
+  display: block;
+}
 #tasks-container{
   height:500px;
   width:800px;

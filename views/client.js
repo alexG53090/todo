@@ -2,7 +2,7 @@ $(document).ready(function(){
   getTaskData().then(function(data){
     formatTaskData(data).then(function(tasks){
       printTasks(tasks).then(function(tasks){
-        console.log(tasks)
+        makeElements(tasks);
       })
     });
   }).catch(function(error){
@@ -35,13 +35,12 @@ function printTasks(tasks){
   });
 };
 
-
-////////////////
-//
-// function getNewTaskData(form){
-//     var formValues = form.serializeArray();
-//     return formValues.reduce(function(formattedTask, task){
-//         formattedTask[task.name] = task.value;
-//         return formattedTask;
-//     }, {});
-// }
+function makeElements(tasks){
+  tasks.forEach(function(item, index, array){
+    var taskItem = item.task;
+    var taskPoints = item.points;
+    var taskComplete = item.complete;
+    $(".task-list").append(taskItem + " " + taskPoints + " " + taskComplete + " " + index);
+    console.log(taskItem + taskPoints, taskComplete)
+  })
+}
