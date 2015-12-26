@@ -40,7 +40,13 @@ function makeElements(tasks){
     var taskItem = item.task;
     var taskPoints = item.points;
     var taskComplete = item.complete;
-    $(".task-list").append(taskItem + " " + taskPoints + " " + taskComplete + " " + index);
+    var taskItemContainer = document.createElement("p");
+      var taskItem = document.createTextNode(item.task);
+      taskItemContainer.appendChild(taskItem);
+
+      var taskListItem = document.createElement("li");
+      taskListItem.appendChild(taskItemContainer);
+    $(".task-list").append(taskItemContainer);
     console.log(taskItem + taskPoints, taskComplete)
   })
 }
