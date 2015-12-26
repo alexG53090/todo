@@ -1,7 +1,9 @@
 $(document).ready(function(){
   getTaskData().then(function(data){
     formatTaskData(data).then(function(tasks){
-      printTasks(tasks);
+      printTasks(tasks).then(function(tasks){
+        console.log(tasks)
+      })
     });
   }).catch(function(error){
     console.error("Couldn't get task data", error);
@@ -28,9 +30,10 @@ function formatTaskData(data){
 };
 
 function printTasks(tasks){
-  console.log(tasks)
-}
-
+  return new Promise(function(resolve, reject){
+    resolve(tasks);
+  });
+};
 
 
 ////////////////
