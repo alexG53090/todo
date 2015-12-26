@@ -31,6 +31,7 @@ app.post("/set", function(req, res){
         complete: req.body.complete,
         points: req.body.points,
     }, "task").then(function(task){
+      res.redirect('/index.html')
     });
 });
 // Update crud routes
