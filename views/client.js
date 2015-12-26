@@ -31,22 +31,31 @@ function formatTaskData(data){
 
 function printTasks(tasks){
   return new Promise(function(resolve, reject){
+    tasks.forEach(function(item, index, array){
+      var taskItem = item.task;
+      var taskPoints = item.points;
+      var taskComplete = item.complete;
+
+      var taskItemContainer = document.createElement("p");
+      var taskName = document.createTextNode(item.task);
+      var taskPoints = document.createTextNode(item.points);
+      var taskComplete = document.createTextNode(item.complete);
+
+      taskItemContainer.appendChild(taskName);
+      taskItemContainer.appendChild(taskPoints);
+      taskItemContainer.appendChild(taskComplete);
+
+      var taskListItem = document.createElement("li");
+      taskListItem.appendChild(taskItemContainer);
+      $(".task-list").append(taskItemContainer);
+
+    })
     resolve(tasks);
   });
 };
 
 function makeElements(tasks){
-  tasks.forEach(function(item, index, array){
-    var taskItem = item.task;
-    var taskPoints = item.points;
-    var taskComplete = item.complete;
-    var taskItemContainer = document.createElement("p");
-      var taskItem = document.createTextNode(item.task);
-      taskItemContainer.appendChild(taskItem);
 
-      var taskListItem = document.createElement("li");
-      taskListItem.appendChild(taskItemContainer);
-    $(".task-list").append(taskItemContainer);
-    console.log(taskItem + taskPoints, taskComplete)
-  })
+console.log(tasks)
+
 }
