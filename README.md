@@ -4,21 +4,21 @@
 - Once you've completed a task, the points are added to your score! 
 - After a week, measure your weekly velocity, in points. **How fun!**
 
-#### :wrench: Built With: 
+#### Built With :wrench:
 ```
 - PostgreSQL
 - Knex 
 - Express
 ```
 
-#### :rocket: Run Locally
+#### Run Locally :rocket: 
 ```
 1. Fork and clone repo
 2. npm i
 3. npm nodemon
 4. localhost/1337
 ```
-##### :nut_and_bolt: Work that needs to be done to finish
+##### Work that needs to be done to finish :nut_and_bolt: 
 
 - [x] Create a task
 - [x] Read a task
