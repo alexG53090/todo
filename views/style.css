@@ -20,6 +20,7 @@ input {
   font-size: 1em;
   color:#ccc;
 }
+
 .field {
   width:150px;
 }
@@ -27,15 +28,19 @@ input {
   margin: 2%;
   width: 800px;
 }
-.task-list li {
+.task-list {
   display: block;
   margin: 5%;
   font-size: 1em;
   color:blue;
+  margin-bottom: -1px;
+  margin-top: -1px
 }
 ul {
   display: block;
+  list-style: none;
 }
+
 #tasks-container{
   height:500px;
   width:800px;
@@ -44,4 +49,11 @@ ul {
 }
 .selected {
   background-color: yellow;
+}
+
+.task-title {
+  color: green;
+}
+.task-complete {
+  color: red;
 }

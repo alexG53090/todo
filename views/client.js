@@ -44,20 +44,24 @@ function printTasks(tasks){
       var taskDeleteButton = document.createElement('button');
       var deleteButtonText = document.createTextNode("Delete task");
       var taskItemContainer = document.createElement("ul");
-      var taskName = document.createTextNode('task: ' + item.task + " ");
+      var taskName = document.createTextNode(item.task);
       var taskNameContainer = document.createElement('li');
       taskNameContainer.appendChild(taskName);
       var taskPoints = document.createTextNode('points: ' + item.points + " ");
       var taskPointsContainer = document.createElement('li');
       taskPointsContainer.appendChild(taskPoints);
       var taskComplete = document.createTextNode('complete: ' + item.complete + " ");
+      var taskCompleteContainer = document.createElement('li');
+      taskCompleteContainer.appendChild(taskComplete);
       taskDeleteButton.className = 'delete-task';
       taskItemContainer.className = 'task-container';
       taskNameContainer.className = 'task-title';
+      taskCompleteContainer.className ='task-complete';
+      taskNameContainer.setAttribute('id', 'task-id');
       taskDeleteButton.appendChild(deleteButtonText);
       taskItemContainer.appendChild(taskNameContainer);
       taskItemContainer.appendChild(taskPointsContainer);
-      taskItemContainer.appendChild(taskComplete);
+      taskItemContainer.appendChild(taskCompleteContainer);
       taskItemContainer.appendChild(taskCompleteButton);
       taskItemContainer.appendChild(taskDeleteButton);
       var taskListItem = document.createElement("li");
@@ -79,20 +83,14 @@ function makeElements(tasks){
 
 function updater(tasks){
   return new Promise(function(resolve, reject){
-    $('.delete-task').on('click', function(){
+    $('.task-title').on('click', function(){
       if($( ".task-title" ).hasClass( "selected" )){
-
-        var taskParamName = $('task-title');
-
-          console.log(taskParamName);
-
-        // for(i = 0; i < taskParamName; i = i +1){
-        // }
-
-        // window.location.href = 'http://localhost:1337/deletethis';
-        // $.get('/deletethis', function(data){
-        //   console.log(data)
-        // })
+        var taskTitle = (this).innerHTML;
+        console.log(taskTitle);
+        $('.delete-task').on('click', function(){
+          console.log('you suck! ' + taskTitle);
+          window.location.href = 'http://localhost:1337/' + taskTitle;
+        })
       }
     })
     resolve(tasks)

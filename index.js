@@ -35,6 +35,15 @@ app.post("/set", function(req, res){
     });
 });
 // Update crud routes
+app.get('/:task', function(req, res){
+  var task = req.params.task;
+  console.log(task)
+  knex("tasks").where('task', '=', task).del().then(function(tasks){
+    res.redirect('/index.html')
+  })
+  // res.send(task)
+
+})
 
 // Delete all crud route
 app.get('/delete', function(req, res, next){
