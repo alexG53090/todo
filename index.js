@@ -59,7 +59,7 @@ app.post("/set", function(req, res){
 // Delete crud routes
 app.get('/:task', function(req, res){
   var task = req.params.task;
-  knex("tasks").where('task', '=', task).del().then(function(tasks){
+  knex("tasks").first().where('task', '=', task).del().then(function(tasks){
     res.redirect('/index.html');
   });
 });
