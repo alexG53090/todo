@@ -4,7 +4,7 @@
 - Knex 
 - Express
 
-###### Run Locally
+##### Run Locally
 ```
 1. Fork and clone repo
 2. npm i
@@ -12,11 +12,14 @@
 4. localhost/1337
 ```
 ###### Work that needs to be done to finish
-```
-1. Update route => allow users to update a task to complete
-2. Bonus: Include route for points to show user how many points they have
-```
-##### Contributions more than welcome, as always!
+
+- [x] Create a task
+- [x] Read a task
+- [x] Delete a task
+- [ ] Update a task
+- [ ] Bonus: show user how many points they have collected!
+
+Contributions **more** than welcome, as always!
 
 >License: MIT
 >Author: Alex Bennett
