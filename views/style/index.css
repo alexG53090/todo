@@ -17,13 +17,16 @@ input {
   color:black;
   border: 0;
   outline: 0;
-  background: transparent;
+  background-color: rgb(238,238,238);
   border: 1px solid #cccccc;
   border-bottom-color: #fff;
   border-right-color: #fff;
   border-radius:3px;
   margin-bottom: 2%;
   background-color: white;
+}
+h1 {
+  margin-top: 5%;
 }
 select {
   width: 88%;
@@ -35,12 +38,25 @@ select {
   border-right-color: #fff;
   border-radius:3px;
   transition:background .2s;
+  background-color: rgb(238,238,238);
+}
+select:focus {
+  width: 88%;
+  height: 3em;
+  text-align: center;
+  background: white;
+  border: 1px solid #cccccc;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-radius:3px;
+  background-color: white;
 }
 .submit{
   margin-top: 5%;
   background-color: #424242;
   border: none;
   color:white;
+  margin-bottom: -5%;
 }
 .directions {
   color: #424242;
@@ -76,7 +92,20 @@ p {
   padding: 4%;
   margin-bottom: 50px;
 }
-
+.point-field{
+  background-color: rgb(238,238,238);
+  transition: background 1s;
+}
+.point-field:focus {
+  background-color: white;
+}
+.field{
+  background-color: rgb(238,238,238);
+  transition: background 1s;
+}
+.field:focus{
+  background-color:white;
+}
 .task-container{
   background-color: white;
   margin: 2%;
@@ -90,11 +119,11 @@ p {
   text-align: left;
   font-size: 1em;
   width: 100%;
+  margin-top: -2%;
 }
 .task-container p {
   text-align: center;
 }
-
 .task-points{
   text-align: center;
 }
