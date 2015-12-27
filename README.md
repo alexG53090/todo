@@ -1,8 +1,10 @@
 #### Basic To Do App
-###### Built With: 
+##### Built With: 
+```
 - PostgreSQL
 - Knex 
 - Express
+```
 
 ##### Run Locally
 ```
@@ -11,7 +13,7 @@
 3. npm nodemon
 4. localhost/1337
 ```
-###### Work that needs to be done to finish
+##### Work that needs to be done to finish
 
 - [x] Create a task
 - [x] Read a task
