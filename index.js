@@ -36,9 +36,16 @@ app.post("/set", function(req, res){
 });
 // Update crud routes
 
-// Delete crud route
+// Delete all crud route
 app.get('/delete', function(req, res, next){
-  knex("tasks").where('points', 1).del().then(function(tasks){
+  knex("tasks").where('points', '>', 0 ).del().then(function(tasks){
+    res.redirect('/index.html')
+  })
+})
+
+//delete row route
+app.get('/deletethis', function(req, res, next){
+  knex("tasks").where('complete', null ).del().then(function(tasks){
     res.redirect('/index.html')
   })
 })

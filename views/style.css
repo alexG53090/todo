@@ -6,7 +6,7 @@ body {
   font-size: 1.5em;
   text-align: center;
 }
-h1 {
+#hOne {
   margin-top: 10%;
 }
 h2 {
@@ -41,4 +41,7 @@ ul {
   width:800px;
   background-color: #fcfcfc;
   margin: 0 auto;
+}
+.selected {
+  background-color: yellow;
 }
