@@ -38,6 +38,7 @@ function printTasks(tasks){
     tasks.forEach(function(item, index, array){
       // task item container
       var taskItemContainer = document.createElement("div");
+      taskItemContainer.className = 'task-container'
       var taskList = document.createElement('ul');
       taskList.className = 'task-lister'
       // task name
@@ -49,35 +50,32 @@ function printTasks(tasks){
       taskNameContainer.className = 'task-title';
       // task points
       var taskPoints = item.points;
-      var taskPoints = document.createTextNode('points: ' + item.points + " ");
+      var taskPoints = document.createTextNode(item.points);
       var taskPointsContainer = document.createElement('li');
       taskPointsContainer.appendChild(taskPoints);
       taskPointsContainer.className = 'task-points';
       // task status
       var taskComplete = item.complete;
-      var taskComplete = document.createTextNode('complete: ' + item.complete + " ");
+      var taskComplete = document.createTextNode(item.complete);
       var taskCompleteContainer = document.createElement('li');
       taskCompleteContainer.appendChild(taskComplete);
       taskCompleteContainer.className ='task-complete';
-      // buttons
-      var taskCompleteButton = document.createElement('button');
+      // var taskCompleteButton = document.createElement('button');
+      // Delete Button
       var taskDeleteButton = document.createElement('button');
       var deleteButtonText = document.createTextNode("Delete task");
       taskDeleteButton.appendChild(deleteButtonText);
-
       var deleteButtonList = document.createElement('li');
       deleteButtonList.appendChild(taskDeleteButton);
-
       taskDeleteButton.className = 'delete-tasker';
-      taskItemContainer.className = 'task-container';
-
+      // Append All
       taskList.appendChild(taskNameContainer);
       taskList.appendChild(taskPointsContainer);
       taskList.appendChild(taskCompleteContainer);
       // taskList.appendChild(taskCompleteButton);
       taskList.appendChild(deleteButtonList);
       taskItemContainer.appendChild(taskList);
-
+      // Append All
       var taskListItem = document.createElement("li");
       taskListItem.appendChild(taskItemContainer);
       $(".task-list").append(taskItemContainer);
