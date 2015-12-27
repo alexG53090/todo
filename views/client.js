@@ -33,6 +33,40 @@ function formatTaskData(data){
   });
 };
 
+function makeElements(tasks){
+  return new Promise(function(resolve, reject){
+    $('.task-title').on('click', function(){
+       $(this).toggleClass('selected');
+    })
+    resolve(tasks)
+  })
+}
+
+function updater(tasks){
+  return new Promise(function(resolve, reject){
+    $('.task-title').on('click', function(){
+      if($( ".task-title" ).hasClass( "selected" )){
+        var taskTitle = (this).innerHTML;
+        console.log(taskTitle);
+        $('.delete-tasker').on('click', function(){
+          console.log('you suck! ' + taskTitle);
+          window.location.href = 'http://localhost:1337/' + taskTitle;
+        })
+      }
+    })
+    resolve(tasks)
+  })
+};
+
+function pushUpdates(tasks){
+  // return setInterval(function(){
+  //   if($( ".task-container" ).hasClass( "selected" )){
+  //     console.log('boo yeah!')
+  //   }
+  // }, 100);
+  console.log('connected');
+}
+
 function printTasks(tasks){
   return new Promise(function(resolve, reject){
     tasks.forEach(function(item, index, array){
@@ -83,37 +117,3 @@ function printTasks(tasks){
     resolve(tasks);
   });
 };
-
-function makeElements(tasks){
-  return new Promise(function(resolve, reject){
-    $('.task-title').on('click', function(){
-       $(this).toggleClass('selected');
-    })
-    resolve(tasks)
-  })
-}
-
-function updater(tasks){
-  return new Promise(function(resolve, reject){
-    $('.task-title').on('click', function(){
-      if($( ".task-title" ).hasClass( "selected" )){
-        var taskTitle = (this).innerHTML;
-        console.log(taskTitle);
-        $('.delete-tasker').on('click', function(){
-          console.log('you suck! ' + taskTitle);
-          window.location.href = 'http://localhost:1337/' + taskTitle;
-        })
-      }
-    })
-    resolve(tasks)
-  })
-};
-
-function pushUpdates(tasks){
-  // return setInterval(function(){
-  //   if($( ".task-container" ).hasClass( "selected" )){
-  //     console.log('boo yeah!')
-  //   }
-  // }, 100);
-  console.log('connected');
-}
