@@ -1,8 +1,10 @@
 ### Basic To Do App :heavy_check_mark:
-- Full-stack web application that helps you keep track of tasks.
-- Assaign each task some points, depending on how difficult the task is. 
-- Once you've completed a task, the points are added to your score! 
-- After a week, measure your weekly velocity, in points. **How fun!**
+| What is this Even?                                                             |
+| -------------------------------------------------------------------------------|
+| :books:  Full-stack web application that helps you keep track of tasks.         |
+| :star:  Assaign each task some points, depending on how difficult the task is.  |
+| :tada:  Once you've completed a task, the points are added to your score!       |
+| :surfer:  After a week, measure your weekly velocity, in points. **How fun!**   |
 
 #### Built With :wrench:
 ```
