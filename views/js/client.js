@@ -104,7 +104,7 @@ function printTasks(tasks){
       // var taskCompleteButton = document.createElement('button');
       //Create button
       var taskCreateButton = document.createElement('button');
-      var createButtonText = document.createTextNode("Create");
+      var createButtonText = document.createTextNode("Update");
       taskCreateButton.appendChild(createButtonText);
       var createButtonList = document.createElement('p');
       createButtonList.appendChild(taskCreateButton);

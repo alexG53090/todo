@@ -1,12 +1,14 @@
 body {
   text-align: center;
   background-color: #EBE8E7;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 label {
   display: block;
   margin: 2%;
+  text-align: left;
+  margin-left: 10%;
 }
-
 input {
   width: 80%;
   height: 2em;
@@ -23,7 +25,6 @@ input {
   margin-bottom: 2%;
   background-color: white;
 }
-
 select {
   width: 80%;
   height: 3em;
@@ -39,5 +40,19 @@ select {
   margin-top: 5%;
   background-color: #424242;
   border: none;
-    color:white;
+  color:white;
+}
+.directions {
+  color: #424242;
+  width: 80%;
+  margin:  0 auto;
+  background-color: #E0DDDD;
+  border: 1px solid #cccccc;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-radius:3px;
+  transition:background .2s;
+  text-align: left;
+  font-size: 1em;
+  padding: 4%;
 }
