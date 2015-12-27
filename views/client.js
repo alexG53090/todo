@@ -12,7 +12,6 @@ $(document).ready(function(){
   }).catch(function(error){
     console.error("Couldn't get task data", error);
   });
-
 });
 
 function getTaskData(){
@@ -37,27 +36,34 @@ function formatTaskData(data){
 function printTasks(tasks){
   return new Promise(function(resolve, reject){
     tasks.forEach(function(item, index, array){
-      var taskItem = item.task;
-      var taskPoints = item.points;
-      var taskComplete = item.complete;
-      var taskCompleteButton = document.createElement('button');
-      var taskDeleteButton = document.createElement('button');
-      var deleteButtonText = document.createTextNode("Delete task");
+      // task item container
       var taskItemContainer = document.createElement("ul");
+      // task name
+      var taskItem = item.task;
       var taskName = document.createTextNode(item.task);
       var taskNameContainer = document.createElement('li');
       taskNameContainer.appendChild(taskName);
+      taskNameContainer.setAttribute('id', 'task-id');
+      taskNameContainer.className = 'task-title';
+      // task points
+      var taskPoints = item.points;
       var taskPoints = document.createTextNode('points: ' + item.points + " ");
       var taskPointsContainer = document.createElement('li');
       taskPointsContainer.appendChild(taskPoints);
+      // task status
+      var taskComplete = item.complete;
       var taskComplete = document.createTextNode('complete: ' + item.complete + " ");
       var taskCompleteContainer = document.createElement('li');
       taskCompleteContainer.appendChild(taskComplete);
+      taskCompleteContainer.className ='task-complete';
+      // buttons
+      var taskCompleteButton = document.createElement('button');
+      var taskDeleteButton = document.createElement('button');
+      var deleteButtonText = document.createTextNode("Delete task");
+
       taskDeleteButton.className = 'delete-task';
       taskItemContainer.className = 'task-container';
-      taskNameContainer.className = 'task-title';
-      taskCompleteContainer.className ='task-complete';
-      taskNameContainer.setAttribute('id', 'task-id');
+
       taskDeleteButton.appendChild(deleteButtonText);
       taskItemContainer.appendChild(taskNameContainer);
       taskItemContainer.appendChild(taskPointsContainer);
@@ -103,6 +109,5 @@ function pushUpdates(tasks){
   //     console.log('boo yeah!')
   //   }
   // }, 100);
-
   console.log('connected');
 }

@@ -18,12 +18,24 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 
+// Delete all crud route
+app.use('/delete', function(req, res, next){
+  knex("tasks").where('points', '>', 0 ).del().then(function(tasks){
+    res.redirect('/index.html')
+  })
+})
+
+app.get('/update', function(req, res){
+  knex("tasks").where
+})
+
 // Read crud routes
 app.get('/get', function(request, response){
   knex('tasks').select().then(function(tasks){
     response.status(200).json({tasks: tasks});
   });
 });
+
 // Create crud routes
 app.post("/set", function(req, res){
     knex("tasks").insert({
@@ -34,27 +46,12 @@ app.post("/set", function(req, res){
       res.redirect('/index.html')
     });
 });
+
 // Update crud routes
 app.get('/:task', function(req, res){
   var task = req.params.task;
   console.log(task)
   knex("tasks").where('task', '=', task).del().then(function(tasks){
-    res.redirect('/index.html')
-  })
-  // res.send(task)
-
-})
-
-// Delete all crud route
-app.get('/delete', function(req, res, next){
-  knex("tasks").where('points', '>', 0 ).del().then(function(tasks){
-    res.redirect('/index.html')
-  })
-})
-
-//delete row route
-app.get('/deletethis', function(req, res, next){
-  knex("tasks").where('complete', null ).del().then(function(tasks){
     res.redirect('/index.html')
   })
 })
