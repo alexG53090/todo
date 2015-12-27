@@ -25,10 +25,6 @@ app.use('/delete', function(req, res, next){
   })
 })
 
-app.get('/update', function(req, res){
-  knex("tasks").where
-})
-
 // Read crud routes
 app.get('/get', function(request, response){
   knex('tasks').select().then(function(tasks){
@@ -53,6 +49,14 @@ app.get('/:task', function(req, res){
   console.log(task)
   knex("tasks").where('task', '=', task).del().then(function(tasks){
     res.redirect('/index.html')
+  })
+})
+
+app.get('/:complete', function(req, res){
+  var boolVal = req.params.complete;
+  console.log(boolVal)
+  knex("tasks").select().first().where('complete', boolVal).update('complete','true').then(function(){
+    res.redirect('/index.html');
   })
 })
 

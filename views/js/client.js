@@ -46,6 +46,7 @@ function updater(tasks){
   return new Promise(function(resolve, reject){
     $('.task-title').on('click', function(){
       $('.delete-tasker').toggleClass('indicate')
+      $('.create-task').toggleClass('indicate')
       if($( ".task-title" ).hasClass( "selected" )){
         var taskTitle = (this).innerHTML;
         console.log(taskTitle);
@@ -60,11 +61,15 @@ function updater(tasks){
 };
 
 function pushUpdates(tasks){
-  // return setInterval(function(){
-  //   if($( ".task-container" ).hasClass( "selected" )){
-  //     console.log('boo yeah!')
-  //   }
-  // }, 100);
+    $('.task-complete').on('click', function(){
+      $(this).toggleClass('indicate');
+      if($('.task-complete').hasClass('indicate')){
+        var completed = (this).innerHTML;
+        $('.create-task').on('click', function(){
+          window.location.href = "http://localhost:1337/" + completed;
+        })
+      }
+    })
   console.log('connected');
 }
 
