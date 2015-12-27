@@ -37,7 +37,9 @@ function printTasks(tasks){
   return new Promise(function(resolve, reject){
     tasks.forEach(function(item, index, array){
       // task item container
-      var taskItemContainer = document.createElement("ul");
+      var taskItemContainer = document.createElement("div");
+      var taskList = document.createElement('ul');
+      taskList.className = 'task-lister'
       // task name
       var taskItem = item.task;
       var taskName = document.createTextNode(item.task);
@@ -50,6 +52,7 @@ function printTasks(tasks){
       var taskPoints = document.createTextNode('points: ' + item.points + " ");
       var taskPointsContainer = document.createElement('li');
       taskPointsContainer.appendChild(taskPoints);
+      taskPointsContainer.className = 'task-points';
       // task status
       var taskComplete = item.complete;
       var taskComplete = document.createTextNode('complete: ' + item.complete + " ");
@@ -60,16 +63,21 @@ function printTasks(tasks){
       var taskCompleteButton = document.createElement('button');
       var taskDeleteButton = document.createElement('button');
       var deleteButtonText = document.createTextNode("Delete task");
+      taskDeleteButton.appendChild(deleteButtonText);
 
-      taskDeleteButton.className = 'delete-task';
+      var deleteButtonList = document.createElement('li');
+      deleteButtonList.appendChild(taskDeleteButton);
+
+      taskDeleteButton.className = 'delete-tasker';
       taskItemContainer.className = 'task-container';
 
-      taskDeleteButton.appendChild(deleteButtonText);
-      taskItemContainer.appendChild(taskNameContainer);
-      taskItemContainer.appendChild(taskPointsContainer);
-      taskItemContainer.appendChild(taskCompleteContainer);
-      taskItemContainer.appendChild(taskCompleteButton);
-      taskItemContainer.appendChild(taskDeleteButton);
+      taskList.appendChild(taskNameContainer);
+      taskList.appendChild(taskPointsContainer);
+      taskList.appendChild(taskCompleteContainer);
+      // taskList.appendChild(taskCompleteButton);
+      taskList.appendChild(deleteButtonList);
+      taskItemContainer.appendChild(taskList);
+
       var taskListItem = document.createElement("li");
       taskListItem.appendChild(taskItemContainer);
       $(".task-list").append(taskItemContainer);
@@ -93,7 +101,7 @@ function updater(tasks){
       if($( ".task-title" ).hasClass( "selected" )){
         var taskTitle = (this).innerHTML;
         console.log(taskTitle);
-        $('.delete-task').on('click', function(){
+        $('.delete-tasker').on('click', function(){
           console.log('you suck! ' + taskTitle);
           window.location.href = 'http://localhost:1337/' + taskTitle;
         })

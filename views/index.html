@@ -10,20 +10,29 @@
     </script>
   </head>
   <body>
-    <h1 id='hOne'>Add a Task to Your List</h1>
-    <form action="/set" method="post">
-      <label>Task Name</label>
-      <input type ='text' name='task' id='task' class='field' value=''>
-      <label>Points</label>
-      <input type="text" name='points' id='points' class='field'>
-      <label>Completed?</label>
-      <input type="checkbox" name="complete"><br />
-       <input class='submit' type="submit" value="Submit" href='/'>
-    </form>
-    <div class='tasks-container'>
-      <ul class='task-list'>
-      </ul>
-    </div>
-    <a href="/delete">Delete All</a>
+    <div id='main'>
+      <div id='right'>
+        <h1 id='hOne'>Add a Task to Your List</h1>
+        <form action="/set" method="post">
+          <label>Task Name</label>
+          <input type ='text' name='task' id='task' class='field' value=''>
+          <label>Points</label>
+          <input type="text" name='points' id='points' class='field'>
+          <label>Completed?</label>
+          <input type="checkbox" name="complete"><br />
+           <input class='submit' type="submit" value="Submit" href='/'>
+        </form>
+            <a href="/delete">Delete All</a>
+      </div>
+      <div id='left'>
+        <div class='tasks-container'>
+
+          <ul class='task-list'>
+          </ul>
+
+        </div>
+
+      </div>
+  </div>
   </body>
 </html>
