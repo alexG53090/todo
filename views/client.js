@@ -45,6 +45,7 @@ function makeElements(tasks){
 function updater(tasks){
   return new Promise(function(resolve, reject){
     $('.task-title').on('click', function(){
+      $('.delete-tasker').toggleClass('indicate')
       if($( ".task-title" ).hasClass( "selected" )){
         var taskTitle = (this).innerHTML;
         console.log(taskTitle);
@@ -97,7 +98,7 @@ function printTasks(tasks){
       // var taskCompleteButton = document.createElement('button');
       // Delete Button
       var taskDeleteButton = document.createElement('button');
-      var deleteButtonText = document.createTextNode("Delete task");
+      var deleteButtonText = document.createTextNode("Delete");
       taskDeleteButton.appendChild(deleteButtonText);
       var deleteButtonList = document.createElement('li');
       deleteButtonList.appendChild(taskDeleteButton);
