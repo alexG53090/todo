@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-color: #EBE8E7;
 }
 label {
   display: block;
@@ -9,5 +10,34 @@ label {
 input {
   width: 80%;
   height: 2em;
-  
+  margin: 0 auto;
+  font-size: 1em;
+  color:black;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border: 1px solid #cccccc;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-radius:3px;
+  margin-bottom: 2%;
+  background-color: white;
+}
+
+select {
+  width: 80%;
+  height: 3em;
+  text-align: center;
+  background: white;
+  border: 1px solid #cccccc;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-radius:3px;
+  transition:background .2s;
+}
+.submit{
+  margin-top: 5%;
+  background-color: #424242;
+  border: none;
+    color:white;
 }
