@@ -80,25 +80,25 @@ function printTasks(tasks){
       // task item container
       var taskItemContainer = document.createElement("div");
       taskItemContainer.className = 'task-container'
-      var taskList = document.createElement('ul');
+      var taskList = document.createElement('div');
       taskList.className = 'task-lister'
       // task name
       var taskItem = item.task;
       var taskName = document.createTextNode(item.task);
-      var taskNameContainer = document.createElement('li');
+      var taskNameContainer = document.createElement('p');
       taskNameContainer.appendChild(taskName);
       taskNameContainer.setAttribute('id', 'task-id');
       taskNameContainer.className = 'task-title';
       // task points
       var taskPoints = item.points;
       var taskPoints = document.createTextNode(item.points);
-      var taskPointsContainer = document.createElement('li');
+      var taskPointsContainer = document.createElement('p');
       taskPointsContainer.appendChild(taskPoints);
       taskPointsContainer.className = 'task-points';
       // task status
       var taskComplete = item.complete;
       var taskComplete = document.createTextNode(item.complete);
-      var taskCompleteContainer = document.createElement('li');
+      var taskCompleteContainer = document.createElement('p');
       taskCompleteContainer.appendChild(taskComplete);
       taskCompleteContainer.className ='task-complete';
       // var taskCompleteButton = document.createElement('button');
@@ -106,14 +106,14 @@ function printTasks(tasks){
       var taskCreateButton = document.createElement('button');
       var createButtonText = document.createTextNode("Create");
       taskCreateButton.appendChild(createButtonText);
-      var createButtonList = document.createElement('li');
+      var createButtonList = document.createElement('p');
       createButtonList.appendChild(taskCreateButton);
       taskCreateButton.className = 'create-task';
       // Delete Button
       var taskDeleteButton = document.createElement('button');
       var deleteButtonText = document.createTextNode("Delete");
       taskDeleteButton.appendChild(deleteButtonText);
-      var deleteButtonList = document.createElement('li');
+      var deleteButtonList = document.createElement('p');
       deleteButtonList.appendChild(taskDeleteButton);
       taskDeleteButton.className = 'delete-tasker';
       // Append All
@@ -125,7 +125,7 @@ function printTasks(tasks){
       taskList.appendChild(deleteButtonList);
       taskItemContainer.appendChild(taskList);
       // Append All
-      var taskListItem = document.createElement("li");
+      var taskListItem = document.createElement("p");
       taskListItem.appendChild(taskItemContainer);
       $(".task-list").append(taskItemContainer);
     })
