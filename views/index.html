@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Basic To Do</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="client.js">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/taskList.css">
+    <script type="text/javascript" src="js/client.js">
     </script>
   </head>
   <body>
@@ -15,15 +16,18 @@
         <h1 id='hOne'>Add a Task to Your List</h1>
         <form action="/set" method="post">
           <label>Task Name</label>
-          <input type ='text' name='task' id='task' class='field' value=''>
-          <label>Points</label>
-          <input type="text" name='points' id='points' class='field'>
+          <input type ='text' name='task' id='task' class='field' value=''><br>
+          <label class='point-label'>Points</label>
+          <input type="text" name='points' id='points' class='point-field'><br>
           <label>Completed?</label>
-          <input type="checkbox" name="complete"><br />
+          <select class='t-f' name='complete'>
+            <option value="true">True</option>
+            <option value="false">False</option>
+          </select><br>
            <input class='submit' type="submit" value="Submit" href='/'>
         </form>
         <a href="/delete">Delete All</a>
-        <p>Directions: Click on the name of the task to select. Once selected you can delete the task by clicking on the 'delete' button</p>
+        <p class='directions'>Directions: Click on the name of the task to select. Once selected you can delete the task by clicking on the 'delete' button</p>
       </div>
       <div id='left'>
         <div class='tasks-container'>
@@ -33,6 +37,7 @@
               <li class="header-points">Points</li>
               <li class='header-status'>Status</li>
               <li class='header-update'>Update</li>
+              <li class='header-update'>Delete</li>
             </ul>
           </div>
           <ul class='task-list'>

@@ -1,0 +1,101 @@
+/********************************************* resets */
+body {
+  margin: 0;
+  padding: 0;
+  background-color:#282B2B;
+  font-family: 'verdana';
+  font-size: 1.5em;
+  margin-top: 1%;
+}
+h2 {
+  display: inline-block;;
+}
+form {
+  margin: 0 auto;
+  color:white;
+  margin-bottom: 5%;
+  margin-left: 5%;
+}
+input {
+  margin: 0 auto;
+  font-size: 1em;
+  color:#ccc;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 2px solid #ccc;
+  width: 20px;
+  margin-top: 2%;
+}
+ul {
+  display: block;
+  list-style: none;
+}
+label{
+  margin-bottom: -20px;
+}
+.selected {
+  text-decoration: underline;
+  height:30px;
+}
+.t-f{
+  margin-top: 2%;
+}
+/********************************************* PAGE CANONS*/
+#main {
+  display: flex;
+  width: 100%;
+  padding: auto;
+  margin: auto;
+}
+#left, #right {
+  flex-direction: column;
+  width:45%;
+  height:100%;
+  padding: auto;
+  margin: auto;
+}
+#left{
+  background-color:#282B2B;
+    margin-top:-24px;
+}
+#right{
+  background-color:#282B2B;
+}
+/********************************************* left side */
+#hOne {
+  margin-top: 10%;
+  color:white;
+}
+.field {
+  width:150px;
+}
+.submit {
+  width: 50%;
+  border: none;
+  color:black;
+  transition-property: background-color;
+  background-color: #f67280;
+  margin-top: 5%;
+}
+.submit:hover {
+  width: 50%;
+  border: none;
+  background-color: white;
+  color:black;
+  transition: background-color 1s;
+    margin-top: 5%;
+}
+.check:checked  {
+  border: none;
+  background-color: yellow;
+  height:160px;
+  width: :160px;
+}
+.directions{
+  color: #ccc;
+}
+.point-field {
+  margin-bottom: 2%;
+  width:20%;
+}

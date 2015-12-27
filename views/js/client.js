@@ -96,6 +96,13 @@ function printTasks(tasks){
       taskCompleteContainer.appendChild(taskComplete);
       taskCompleteContainer.className ='task-complete';
       // var taskCompleteButton = document.createElement('button');
+      //Create button
+      var taskCreateButton = document.createElement('button');
+      var createButtonText = document.createTextNode("Create");
+      taskCreateButton.appendChild(createButtonText);
+      var createButtonList = document.createElement('li');
+      createButtonList.appendChild(taskCreateButton);
+      taskCreateButton.className = 'create-task';
       // Delete Button
       var taskDeleteButton = document.createElement('button');
       var deleteButtonText = document.createTextNode("Delete");
@@ -108,6 +115,7 @@ function printTasks(tasks){
       taskList.appendChild(taskPointsContainer);
       taskList.appendChild(taskCompleteContainer);
       // taskList.appendChild(taskCompleteButton);
+      taskList.appendChild(createButtonList);
       taskList.appendChild(deleteButtonList);
       taskItemContainer.appendChild(taskList);
       // Append All
