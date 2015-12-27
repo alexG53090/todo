@@ -1,7 +1,8 @@
 @media screen and (max-width: 850px) {
   body {
     text-align: center;
-    background-color: #EBE8E7;
+    /*background-color: #EBE8E7;*/
+    background: url('http://img10.deviantart.net/5859/i/2013/160/3/b/paper_texture_by_evusha-d68dvv6.jpg');
     font-family: 'Roboto Condensed', sans-serif;
   }
   label {
@@ -55,7 +56,7 @@
       margin-bottom: 2%;
   }
   .submit {
-    background-color: #E0DDDD;
+    background-color: rgb(238,238,238);
     border: none;
     color:#424242;
     margin-bottom: 2%;
@@ -81,7 +82,7 @@
     color: #424242;
     width: 80%;
     margin:  0 auto;
-    background-color: #E0DDDD;
+    background-color: rgb(238,238,238);
     border: 1px solid #cccccc;
     border-bottom-color: #fff;
     border-right-color: #fff;
@@ -100,7 +101,7 @@
     color: #424242;
     width: 80%;
     margin:  0 auto;
-    background-color: #E0DDDD;
+    background-color: rgb(238,238,238);
     border: 1px solid #cccccc;
     border-bottom-color: #fff;
     border-right-color: #fff;
@@ -147,7 +148,7 @@
     text-align: center;
   }
   .create-task, .delete-tasker {
-    background-color: #E0DDDD;
+    background-color: rgb(238,238,238);
     border: none;
     color:#424242;
     height: 3em;
@@ -186,7 +187,7 @@
 @media screen and (min-width: 850px) {
   body {
     text-align: center;
-    background-color: #EBE8E7;
+    background: url('http://img10.deviantart.net/5859/i/2013/160/3/b/paper_texture_by_evusha-d68dvv6.jpg');
     font-family: 'Roboto Condensed', sans-serif;
   }
   label {
@@ -240,7 +241,7 @@
     background-color: white;
   }
   .submit{
-    background-color: #E0DDDD;
+    background-color:rgb(238,238,238);
     border: none;
     color:#424242;
     height: 3em;
@@ -267,7 +268,7 @@
     color: #424242;
     width: 46%;
     margin:  0 auto;
-    background-color: #E0DDDD;
+    background-color: rgb(238,238,238);
     border: 1px solid #cccccc;
     border-bottom-color: #fff;
     border-right-color: #fff;
@@ -286,7 +287,7 @@
     color: #424242;
     width: 46%;
     margin:  0 auto;
-    background-color: #E0DDDD;
+    background-color: rgb(238,238,238);
     border: 1px solid #cccccc;
     border-bottom-color: #fff;
     border-right-color: #fff;
@@ -334,7 +335,7 @@
     text-align: center;
   }
   .create-task, .delete-tasker {
-    background-color: #E0DDDD;
+    background-color: rgb(238,238,238);
     border: none;
     color:#424242;
     height: 3em;
