@@ -18,7 +18,7 @@
 - [x] Create a task
 - [x] Read a task
 - [x] Delete a task
-- [ ] Update a task
+- [x] Update a task
 - [ ] Bonus: show user how many points they have collected!
 
 Contributions **more** than welcome, as always!
