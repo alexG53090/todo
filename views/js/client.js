@@ -66,7 +66,8 @@ function pushUpdates(tasks){
       if($('.task-complete').hasClass('indicate')){
         var completed = (this).innerHTML;
         $('.create-task').on('click', function(){
-          window.location.href = "http://localhost:1337/" + completed;
+          window.location.href = "http://localhost:1337/" + completed + '/whatever';
+          console.log(completed)
         })
       }
     })
