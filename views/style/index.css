@@ -56,3 +56,45 @@ select {
   font-size: 1em;
   padding: 4%;
 }
+p {
+  display:inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.task-list{
+  color: #424242;
+  width: 80%;
+  margin:  0 auto;
+  background-color: #E0DDDD;
+  border: 1px solid #cccccc;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-radius:3px;
+  transition:background .2s;
+  text-align: left;
+  font-size: 1em;
+  padding: 4%;
+  margin-bottom: 50px;
+}
+
+.task-container{
+  background-color: white;
+  margin: 2%;
+  text-align: center;
+  margin:  0 auto;
+  border: 1px solid #cccccc;
+  border-bottom-color: #fff;
+  border-right-color: #fff;
+  border-radius:3px;
+  transition:background .2s;
+  text-align: left;
+  font-size: 1em;
+  width: 100%;
+}
+.task-container p {
+  text-align: center;
+}
+
+.task-points{
+  text-align: center;
+}
