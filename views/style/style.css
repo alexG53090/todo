@@ -43,21 +43,21 @@ label{
 }
 /********************************************* PAGE CANONS*/
 #main {
-  display: flex;
   width: 100%;
   padding: auto;
   margin: auto;
+  display: flex;
 }
 #left, #right {
-  flex-direction: column;
-  width:45%;
-  height:100%;
+  width:100%;
+  height:500px;
   padding: auto;
   margin: auto;
+  flex-direction:row;
 }
 #left{
   background-color:#282B2B;
-    margin-top:-24px;
+  margin-top:-24px;
 }
 #right{
   background-color:#282B2B;
@@ -94,8 +94,35 @@ label{
 }
 .directions{
   color: #ccc;
+  margin-left: 5%;
+  width:75%;
+  font-size: .75em;
 }
 .point-field {
   margin-bottom: 2%;
   width:20%;
+}
+.delete-all {
+  margin-left:5%;
+  font-family: 'Helvetica';
+  color:#ccc;
+}
+
+@media screen and (max-width: 1100px) {
+  #main {
+    background-color: green;
+    display: flex;
+  }
+  #left, #right {
+    flex-direction: ;
+    width: 100%;
+  }
+  #left{
+    background-color:blue;
+    width: 100%;
+  }
+  #right{
+    background-color:#282B2B;
+    width: 100%;
+  }
 }

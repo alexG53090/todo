@@ -58,7 +58,6 @@ app.post('/:complete', function(req, res){
     knex("tasks").where('complete', '=', boolVal).del().then(function(){
       res.redirect('/index.html');
     })
-
 })
 
 //bad request
