@@ -52,12 +52,13 @@ app.get('/:task', function(req, res){
   })
 })
 
-app.get('/:complete', function(req, res){
-  var boolVal = req.params.complete;
-  console.log(boolVal)
-  knex("tasks").select().first().where('complete', boolVal).update('complete','true').then(function(){
-    res.redirect('/index.html');
-  })
+app.post('/:complete', function(req, res){
+    var yull = req.params.complete;
+    console.log(yull)
+    knex("tasks").where('complete', '=', boolVal).del().then(function(){
+      res.redirect('/index.html');
+    })
+
 })
 
 //bad request
