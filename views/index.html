@@ -7,47 +7,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/taskList.css"> -->
+    <link rel='stylesheet' href='style/index.css'>
     <script type="text/javascript" src="js/client.js">
     </script>
   </head>
   <body>
-    <div id='main'>
-      <div id='right'>
-        <h1 id='hOne'>Add a Task to Your List</h1>
-        <form action="/set" method="post">
-          <label>Task Name</label>
-          <input type ='text' name='task' id='task' class='field' value=''><br>
-          <label class='point-label'>Points</label>
-          <input type="text" name='points' id='points' class='point-field'><br>
-          <label>Completed?</label>
-          <select class='t-f' name='complete'>
-            <option value="false">False</option>
-            <option value="true">True</option>
-          </select><br>
-           <input class='submit' type="submit" value="Submit" href='/'>
-        </form>
-        <p class='directions'>Directions: <br><br>
-          Delete: Click on the name of the task. Once selected,
-          you can delete the task by clicking on the 'delete' button.<br><br>
-          Mark as Complete: Click on the status of the task. Once, selected click the 'update' button.
-        </p>
-        <a href="/delete" class='delete-all'>Delete All</a>
-      </div>
-      <div id='left'>
-        <div class='tasks-container'>
-          <div class='headers'>
-            <ul class='columns'>
-              <li class="column header-name">Name</li>
-              <li class="header-points">Points</li>
-              <li class='header-status'>Status</li>
-              <li class='header-update'>Update</li>
-              <li class='header-update'>Delete</li>
-            </ul>
-          </div>
-          <ul class='task-list'>
-          </ul>
-        </div>
-      </div>
+    <h1>Add a Task to Your List</h1>
+    <form action="/set" method="post">
+      <label>Task Name</label>
+      <input type ='text' name='task' id='task' class='field' value=''><br>
+      <label class='point-label'>Points</label>
+      <input type="text" name='points' id='points' class='point-field'><br>
+      <label>Completed?</label>
+      <select class='t-f' name='complete'>
+        <option value="false">False</option>
+        <option value="true">True</option>
+      </select><br>
+      <input class='submit' type="submit" value="Submit" href='/'>
+    </form>
+    <p class='directions'>Directions: <br><br>
+      Delete: Click on the name of the task. Once selected,
+      you can delete the task by clicking on the 'delete' button.<br><br>
+      Mark as Complete: Click on the status of the task. Once, selected click the 'update' button.
+    </p>
+    <a href="/delete" class='delete-all'>Delete All</a>
+    <div class='tasks-container'>
+      <p class="column header-name">Name</p>
+      <p class="header-points">Points</p>
+      <p class='header-status'>Status</p>
+      <p class='header-update'>Update</p>
+      <p class='header-update'>Delete</p>
+      <ul class='task-list'>
+      </ul>
     </div>
   </body>
 </html>
