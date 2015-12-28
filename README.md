@@ -1,12 +1,12 @@
 ### Basic To Do App :heavy_check_mark:
 > #### What is this?
 
-|  Features |                                                                            |
-|---------|----------------------------------------------------------------------------|
-|Full-stack web application that helps you keep track of **tasks**.  | :books:         | 
-|  Assaign each task some **points**, depending on how difficult the task is. | :star:  |
-| Once you've completed a task, the points are added to your **score**! | :tada:        |
-|After a week, measure your weekly velocity, in points. **How fun!**   |  :surfer:   |
+Full-stack web application that helps you keep track of **tasks**. :books: 
+Assaign each task some **points**, depending on how difficult the task is. :star:
+Once you've completed a task, the points are added to your **score**! :tada:
+After a week, measure your weekly velocity, in points. **How fun!** :surfer:
+
+---
 
 #### Built With :wrench:
 ```
@@ -14,7 +14,6 @@
 - Knex 
 - Express
 ```
-
 #### Run Locally :rocket: 
 ```
 1. Clone and cd into repo
@@ -23,6 +22,8 @@
 4. npm nodemon
 5. localhost/1337
 ```
+---
+
 ##### Work that needs to be done to finish :nut_and_bolt: 
 
 - [x] Create a task
@@ -39,6 +40,8 @@ This app is a bit buggy! :bug:
 - [ ] Sometimes 'delete all' won't work when there is only one task item.
 
 Contributions **more** than welcome, as always!
+
+---
 
 >License: MIT
 
