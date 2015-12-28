@@ -4,7 +4,7 @@
 - Full-stack web application that helps you keep track of **tasks**. :books: 
 - Assaign each task some **points**, depending on how difficult the task is. :star:
 - Once you've completed a task, the points are added to your **score**! :tada:
-- After a week, measure your weekly velocity, in points. **How fun!** :surfer:
+- Measure your weekly velocity, in points. **How fun!** :surfer:
 
 ---
 
