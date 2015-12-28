@@ -1,5 +1,6 @@
 ### Basic To Do App :heavy_check_mark:
 > #### What is this?
+
 :books:  Full-stack web application that helps you keep track of tasks.         
 :star:  Assaign each task some points, depending on how difficult the task is.  
 :tada:  Once you've completed a task, the points are added to your score!       
@@ -31,8 +32,9 @@
 ##### Warning :bug:
 This app is a bit buggy!
 ###### Known bugs:
-- [ ] When updating the status of one task, all task are updated
+- [ ] When updating the status of one task, all tasks are updated.
 - [ ] When selecting one task name, all delete buttons are activated when only the delete button that belongs to the task should be activated.
+- [ ] Sometimes 'delete all' won't work when there is only one task item.
 
 Contributions **more** than welcome, as always!
 
