@@ -29,8 +29,8 @@
 - [x] Update a task
 - [ ] Bonus: show user how many points they have collected!
 
-##### Warning :bug:
-This app is a bit buggy!
+##### Warning :warning:
+This app is a bit buggy! :bug:
 ###### Known bugs:
 - [ ] When updating the status of one task, all tasks are updated.
 - [ ] When selecting one task name, all delete buttons are activated when only the delete button that belongs to the task should be activated.
