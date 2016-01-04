@@ -4,7 +4,7 @@
   "description": "Basic to do application",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "start": "start"
   },
   "author": "Alex Bennett <alexandergraybennett@gmail.com> (http://thedope.agency)",
   "license": "MIT",
